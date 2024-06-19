@@ -2,9 +2,9 @@
 Script for downloading, cleaning and resizing Open X-Embodiment Dataset (https://robotics-transformer-x.github.io/)
 
 Performs the preprocessing steps:
-  1. Downloads mixture of 25 Open X-Embodiment datasets
+  1. Downloads datasets from Open X-Embodiment
   2. Runs resize function to convert all datasets to 256x256 (if image resolution is larger) and jpeg encoding
-  3. Fixes channel flip errors in a few datsets, filters success-only for QT-Opt ("kuka") data
+  3. Fixes channel flip errors in a few datasets, filters success-only for QT-Opt ("kuka") data
 
 To reduce disk memory usage during conversion, we download the datasets 1-by-1, convert them
 and then delete the original.
@@ -27,6 +27,7 @@ echo "!!! Instead download the bridge_dataset from here: https://rail.eecs.berke
 
 # format: [dataset_name, dataset_version, transforms]
 DATASET_TRANSFORMS=(
+    # Datasets used for OpenVLA: https://openvla.github.io/
     "fractal20220817_data 0.1.0 resize_and_jpeg_encode"
     "bridge 0.1.0 resize_and_jpeg_encode"  
     "kuka 0.1.0 resize_and_jpeg_encode,filter_success"
@@ -34,7 +35,6 @@ DATASET_TRANSFORMS=(
     "jaco_play 0.1.0 resize_and_jpeg_encode"
     "berkeley_cable_routing 0.1.0 resize_and_jpeg_encode"
     "roboturk 0.1.0 resize_and_jpeg_encode"
-    "nyu_door_opening_surprising_effectiveness 0.1.0 resize_and_jpeg_encode"
     "viola 0.1.0 resize_and_jpeg_encode"
     "berkeley_autolab_ur5 0.1.0 resize_and_jpeg_encode,flip_wrist_image_channels"
     "toto 0.1.0 resize_and_jpeg_encode"
@@ -52,6 +52,9 @@ DATASET_TRANSFORMS=(
     "utaustin_mutex 0.1.0 resize_and_jpeg_encode,flip_wrist_image_channels,flip_image_channels"
     "berkeley_fanuc_manipulation 0.1.0 resize_and_jpeg_encode,flip_wrist_image_channels,flip_image_channels"
     "cmu_stretch 0.1.0 resize_and_jpeg_encode"
+    "dobbe 0.0.1 resize_and_jpeg_encode"
+    "fmb 0.0.1 resize_and_jpeg_encode"
+    "droid 1.0.0 resize_and_jpeg_encode"
 )
 
 for tuple in "${DATASET_TRANSFORMS[@]}"; do
