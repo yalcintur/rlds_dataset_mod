@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH --partition=tibet --qos=normal
-#SBATCH --time=06:00:00
+#SBATCH --time=12:00:00
 #SBATCH --nodes=1
 #SBATCH --cpus-per-task=24
 #SBATCH --mem=120G
