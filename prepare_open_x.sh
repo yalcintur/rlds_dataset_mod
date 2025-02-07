@@ -3,7 +3,7 @@
 #SBATCH --time=12:00:00
 #SBATCH --nodes=1
 #SBATCH --cpus-per-task=24
-#SBATCH --mem=120G
+#SBATCH --mem=100G
 
 #SBATCH --job-name="process_open_x"
 #SBATCH --output=sample-%j.out
@@ -31,7 +31,7 @@ echo "working directory = "$SLURM_SUBMIT_DIR
 
 DOWNLOAD_DIR=/vision/group/jointvla/raw
 CONVERSION_DIR=/vision/group/jointvla/processed_downsample10x
-N_WORKERS=20
+N_WORKERS=10
 MAX_EPISODES_IN_MEMORY=200
 
 # increase limit on number of files opened in parallel to 20k --> conversion opens up to 1k temporary files
