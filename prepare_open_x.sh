@@ -32,7 +32,7 @@ echo "working directory = "$SLURM_SUBMIT_DIR
 DOWNLOAD_DIR=/vision/group/jointvla/raw
 CONVERSION_DIR=/vision/group/jointvla/processed_downsample10x
 N_WORKERS=30
-MAX_EPISODES_IN_MEMORY=200
+MAX_EPISODES_IN_MEMORY=210
 
 # increase limit on number of files opened in parallel to 20k --> conversion opens up to 1k temporary files
 # in /tmp to store dataset during conversion
