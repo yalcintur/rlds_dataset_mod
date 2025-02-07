@@ -38,6 +38,11 @@ MAX_EPISODES_IN_MEMORY=200
 # in /tmp to store dataset during conversion
 ulimit -n 20000
 
+source /sailhome/yalcintr/openx/bin/activate
+
+which python
+python --version
+
 # format: [dataset_name, dataset_version, transforms]
 DATASET_TRANSFORMS=(
     # Datasets used for OpenVLA: https://openvla.github.io/
