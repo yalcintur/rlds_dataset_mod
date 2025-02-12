@@ -58,7 +58,7 @@ N_WORKERS=30
 MAX_EPISODES_IN_MEMORY=210
 
 # Process dataset
-python3 modify_rlds_dataset.py --dataset=$DATASET --data_dir=\$DOWNLOAD_DIR --target_dir=\$CONVERSION_DIR --mods=$TRANSFORM --n_workers=\$N_WORKERS --max_episodes_in_memory=\$MAX_EPISODES_IN_MEMORY
+python3 ../modify_rlds_dataset.py --dataset=$DATASET --data_dir=\$DOWNLOAD_DIR --target_dir=\$CONVERSION_DIR --mods=$TRANSFORM --n_workers=\$N_WORKERS --max_episodes_in_memory=\$MAX_EPISODES_IN_MEMORY
 
 echo "Finished processing $DATASET"
 EOT
