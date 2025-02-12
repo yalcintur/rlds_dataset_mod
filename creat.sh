@@ -41,7 +41,7 @@ for i in {0..26}; do
   cat <<EOT > process_${DATASET}.sh
 #!/bin/bash
 #SBATCH --partition=tibet --qos=normal
-#SBATCH --time=12:00:00
+#SBATCH --time=96:00:00
 #SBATCH --nodes=1
 #SBATCH --cpus-per-task=32
 #SBATCH --mem=100G
