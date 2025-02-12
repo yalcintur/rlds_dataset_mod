@@ -1,14 +1,3 @@
-# ikpy_robot_configs.py
-
-# This dictionary maps dataset names to the corresponding IK configuration.
-# For each dataset you can specify:
-#   - "urdf_path": The path to the robot’s URDF.
-#   - "eef_field": The key within the observation dictionary where the EEF position is stored.
-#                   (If not defined, your IK function may choose a default.)
-#   - "eef_slice": A tuple (start, end) indicating the slice of the tensor (from the given field)
-#                  that contains the EEF position.
-#   - Optionally, other keys such as "eef_key" can be provided if the data is nested.
-
 IKPY_ROBOT_CONFIGS = {
     "bridge_oxe": {
          "urdf_path": "path_to_urdf",
